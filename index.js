@@ -24,7 +24,7 @@ const promptManagerInfo = () => {
             }
         },
         {
-            // id 12
+            // id 1
             type: 'input',
             name: 'managerId',
             message: "What is the team manager's id?",
@@ -54,7 +54,7 @@ const promptManagerInfo = () => {
             }
         },
         {
-            // b2
+            // 2
             type: 'input',
             name: 'managerOffice',
             message: "What is the team manager's office #?",  
@@ -95,7 +95,7 @@ const promptManagerInfo = () => {
                     }
                 },
                 {    
-                    // 01
+                    // 02
                     type: 'input',
                     name: 'engineerId',
                     message: "What is your engineer's ID?",
@@ -134,4 +134,65 @@ const promptManagerInfo = () => {
                     }
                 }
             ])
-   }
+
+            .then((data) => {
+                const newEngineer = new Engineer(data.engName, data.engId, data.engEmail, data.engGithub);
+                employeesArray.push(newEngineer);
+                promptTeamChoices();
+            });
+        } else if (teamChoices === "Intern") {
+            inquirer.prompt([
+                {     //christian
+                    type: 'input',
+                    name: 'intName',
+                    message: "What is your intern's name?",
+                   
+                    validate: intNameInput => {
+                        if (intNameInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your intern's name!");
+                        }
+                    }
+                },
+                {       //03
+                    type: 'input',
+                    name: 'intId',
+                    message: "What is your intern's ID?",
+                   
+                    validate: intIdInput => {
+                        if (intIdInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your intern's ID!");
+                        }
+                    }
+                },
+                {        //dieegoa@icloud.com
+                    type: 'input',
+                    name: 'intEmail',
+                    message: "What is your intern's email?",
+                   
+                    validate: intEmailInput => {
+                        if (intEmailInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your intern's email address!");
+                        }
+                    }
+                },
+                {        //uncc
+                    type: 'input',
+                    name: 'intSchool',
+                    message: "What school does your intern go to?",
+                    
+                    validate: intSchoolInput => {
+                        if (intSchoolInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your intern's school!");
+                        }
+                    }
+                }
+            ])
+       
