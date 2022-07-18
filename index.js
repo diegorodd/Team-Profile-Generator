@@ -235,4 +235,15 @@ HTML file created!
 };
 
 
+function init() {
+    console.log(` answer the questions to build your team!`);
+    promptManagerInfo()
+    .then(data => {
+        const newManager = new Manager(data.managerName, data.managerId, data.managerEmail, data.managerOffice)
+        employeesArray.push(newManager);
+        promptTeamChoices();
+    })
+}
+
+
 init();
