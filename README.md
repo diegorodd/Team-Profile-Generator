@@ -1,7 +1,7 @@
 # Team-Profile-Generator
 
 [github](https://github.com/diegorodd/Team-Profile-Generator)
-
+[livevideo](https://drive.google.com/file/d/1eJtXyVObMVqKf8l2gCzU1Xj5xt9OcXhx/view)
 
 # Acceptance Criteria
 GIVEN a command-line application that accepts user input
@@ -21,3 +21,23 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests) npm - node - jest - 
+* [Questions](#questions)
+  ## Introduction 
+  ## Installation 
+  
+  ## Usage 
+  (html, javascript , node js, )
+  
+  ## License
+  ## Contributions
+  
+  ## Tests
+   (chrome)
+  ## Questions
+  For questions email me at : dieegoa@icloud.com

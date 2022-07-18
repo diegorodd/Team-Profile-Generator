@@ -15,6 +15,7 @@ const promptManagerInfo = () => {
             name: 'managerName',
             message: "What is the team manager's name?",
 
+    
             validate: managerNameInput => {
                 if (managerNameInput) {
                     return true;
