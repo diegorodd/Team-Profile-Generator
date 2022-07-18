@@ -68,7 +68,7 @@ const promptManagerInfo = () => {
             }
         },
     ])
-   }
+}
 
 
    const promptTeamChoices = () => {
@@ -195,4 +195,6 @@ const promptManagerInfo = () => {
                     }
                 }
             ])
-       
+        }
+    })
+}
