@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/diegorodd/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/diegorodd/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/diegorodd/Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }

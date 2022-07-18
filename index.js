@@ -195,6 +195,44 @@ const promptManagerInfo = () => {
                     }
                 }
             ])
+
+            .then((data) => {
+                const newIntern = new Intern(data.intName, data.intId, data.intEmail, data.intSchool);
+                employeesArray.push(newIntern);
+                promptTeamChoices();
+            });
+        } else {
+            
+            const myPage = generatePage(employeesArray);
+            writeFile(myPage)
+            .then(writeFileResponse => {
+                console.log(writeFileResponse.message);
+                return;
+            })
+            .catch(err => {
+                console.log(err);
+                return;
+            });
         }
-    })
-}
+    });
+};
+
+const writeFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/index.html', fileContent, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: `
+HTML file created! 
+`
+            });   
+        });
+    });
+};
+
+
+init();
