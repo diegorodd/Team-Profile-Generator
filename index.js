@@ -54,6 +54,7 @@ const promptManagerInfo = () => {
             }
         },
         {
+            // b2
             type: 'input',
             name: 'managerOffice',
             message: "What is the team manager's office #?",  
@@ -77,5 +78,60 @@ const promptManagerInfo = () => {
            message: 'which type of team member would you like to add',
            choices: ['engineer', 'Intern', 'None']
        })
-       .then()
+       .then(({ teamChoices }) => {
+        if (teamChoices === "Engineer") {
+            inquirer.prompt([
+                {    
+                    // david
+                    type: 'input',
+                    name: 'engineerName',
+                    message: "What is your engineer's name?",
+                    validate: engineerNameInput => {
+                        if (engineerNameInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your engineer's name!");
+                        }
+                    }
+                },
+                {    
+                    // 01
+                    type: 'input',
+                    name: 'engineerId',
+                    message: "What is your engineer's ID?",
+                    validate: engineerIdInput => {
+                        if (engineerIdInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your engineer's ID");
+                        }
+                    }
+                },
+                {    
+                    // dieegoa@icloud.com
+                    type: 'input',
+                    name: 'engineerEmail',
+                    message: "What is your engineer's email?",
+                    validate: engineerEmailInput => {
+                        if (enginereEmailInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your engineer's email");
+                        }
+                    }
+                },
+                {    
+                    // diegorodd
+                    type: 'input',
+                    name: 'engineerGithub',
+                    message: "What is your engineer's github?",
+                    validate: engineerGithubInput => {
+                        if (engineerGithubInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter your engineer's Github");
+                        }
+                    }
+                }
+            ])
    }
