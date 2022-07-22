@@ -6,7 +6,7 @@ const generatePage = require('./src/page-Template');
 const fs = require('fs');
 
 const employeesArray = [];
-
+// fixed the inquirer issue
 const promptManagerInfo = () => {
     return inquirer.prompt([
         {
